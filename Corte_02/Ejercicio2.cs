@@ -5,40 +5,45 @@ namespace ejercicio2
     class program
     {
 
-        string[] valor;
-        int numero;
+       private int[] valor;
+        int NUMERO;
         int suma;
         int total;
 
-        public void imprimir_sumar()
+        public void imprimir()
         {
 
             do
             {
                 Console.WriteLine("¿cuantos valores vas a ingresar?");
-                numero = int.Parse(Console.ReadLine());
-            } while (numero <= 0);
-            valor = new string[numero];
+                NUMERO = int.Parse(Console.ReadLine());
+            } while (NUMERO <= 0);
+            valor = new int[NUMERO];
 
-            for (int i = 0; i < numero; i++)
+            for (int i = 0; i < NUMERO; i++)
             {
                 Console.WriteLine("intruduce valores: ");
                 valor[i] = Console.ReadLine();
             }
-            Console.WriteLine(" Se Guardaron " + numero + "valores \n presiona enter para velos");
-            for (int i = 0; i < numero; i++)
-            {
-                Console.WriteLine("posicion" + i + " : " + valor[i]);
-                suma = suma + numero;
-            }
-            Console.WriteLine("la suma es :" + suma );
-            
-
+            Console.WriteLine(" Se Guardaron " + NUMERO + "valores \n presiona enter para velos");
         }
+        public void sumar()
+        {
+            Console.WriteLine("El vector resultante es ");
+
+            for(int i = 0;i < NUMERO;  i++)
+            {
+                suma += valor[i]; 
+                Console.WriteLine("  " + valor[i] + "  ");
+            }
+            Console.WriteLine($"El resultado de los valores del vector es : {suma}");
+        }
+
         static void Main(string[] args)
         {
             program program = new program();
-            program.imprimir_sumar();
+            program.imprimir();
+            program.sumar();
         }
           
 
