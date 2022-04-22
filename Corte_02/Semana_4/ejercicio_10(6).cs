@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-namespace AplicacionBase
+namespace ejercicio06
 {
 
     public class Program

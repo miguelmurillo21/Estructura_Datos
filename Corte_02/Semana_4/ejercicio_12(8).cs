@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-namespace AplicacionBase
+namespace ejercicio08
 {
 
     public class Program
@@ -32,7 +32,7 @@ namespace AplicacionBase
             Console.ReadKey();
             while (miCola.Count > 0)
             {
-                //Cargar la pila 
+                //apilar
                 int Co = 0;
                 Co = (int)miCola.Dequeue();
                 Console.WriteLine($"  Cola: {Co}");
@@ -45,9 +45,10 @@ namespace AplicacionBase
                 Console.WriteLine($"  Pila: {Pila.Pop()}");
             }
 
-            miCola2.Enqueue(Pila);
+           
             while (miCola2.Count > 0)
             {
+                miCola2.Enqueue(Pila);
                 int cola;
                 cola = (int)miCola2.Dequeue();
                 Console.WriteLine(cola);

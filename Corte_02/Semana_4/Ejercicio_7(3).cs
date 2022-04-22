@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace Ejercicio7
+namespace Ejercicio3
 {
     class Program
     {
