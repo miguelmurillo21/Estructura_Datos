@@ -18,8 +18,10 @@ namespace Ejemplo_binario
             //con este ciclo for cramos la matriz
             for (int i = 0; i < data.GetLength(0); i++)
             {
+                //utilizamos el GetLength para encontrar el número total de elementos de la matriz
                 for (int j = 0; j < data.GetLength(1); j++)
                 {
+                    // utilizamos NextDouble para generar un número aleatorio entre 0 y 1
                     data[i, j] = objeto.NextDouble() + objeto.Next(5, 26);
                     Console.Write("[{0}]", data[i, j]);
                 }
